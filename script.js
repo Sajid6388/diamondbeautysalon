@@ -100,85 +100,61 @@ function setupPageTransitions() {
   const isTransitioning = sessionStorage.getItem('pageTransitioning') === 'true';
 
   if (!isTransitioning) {
-    if (preloader) {
-      preloader.classList.add('fade-out');
-    }
-    if (main) {
-      main.classList.add('visible');
-    }
+    // No transition — show page immediately
+    if (preloader) preloader.classList.add('fade-out');
+    if (main) main.classList.add('visible');
   } else {
-    // Clear transitioning flag so subsequent loads or refreshes do not show the preloader
+    // Clear flag so refreshes don't re-trigger
     sessionStorage.removeItem('pageTransitioning');
 
-    // Initially make main hidden if preloader exists
-    if (preloader && main) {
-      main.style.opacity = '0';
-      main.style.transform = 'translateY(15px)';
-    }
-
+    // Reveal: fade out preloader, fade in main
     const revealPage = () => {
-      if (preloader) {
-        preloader.classList.add('fade-out');
-      }
-      if (main) {
-        setTimeout(() => {
-          main.classList.add('visible');
-          main.style.opacity = '';
-          main.style.transform = '';
-        }, 200);
-      }
+      if (preloader) preloader.classList.add('fade-out');
+      // Slight delay so preloader fade-out starts first
+      setTimeout(() => {
+        if (main) main.classList.add('visible');
+      }, 150);
     };
 
-    if (preloader) {
-      window.addEventListener('load', revealPage);
-      // Safety fallback
-      setTimeout(revealPage, 2500);
-    } else if (main) {
-      main.classList.add('visible');
-    }
+    window.addEventListener('load', revealPage);
+    // Safety fallback
+    setTimeout(revealPage, 1500);
   }
 
-  // Intercept local page link clicks for fade out transition
+  // Intercept local page link clicks for fade-out transition
   document.addEventListener('click', (e) => {
     const link = e.target.closest('a');
-    if (link) {
-      const href = link.getAttribute('href');
-      const target = link.getAttribute('target');
-      
-      // Ensure it is a valid local page transition link
-      if (
-        href && 
-        href !== '#' &&
-        !href.startsWith('#') && 
-        !href.startsWith('tel:') && 
-        !href.startsWith('mailto:') && 
-        target !== '_blank' && 
-        !e.ctrlKey && 
-        !e.metaKey && 
-        !e.shiftKey
-      ) {
-        e.preventDefault();
+    if (!link) return;
 
-        // Set transition flag in storage
-        sessionStorage.setItem('pageTransitioning', 'true');
+    const href = link.getAttribute('href');
+    const target = link.getAttribute('target');
 
-        // Remove the helper class that bypasses transition
-        document.documentElement.classList.remove('no-page-transition');
-        
-        if (main) {
-          main.style.opacity = '';
-          main.style.transform = '';
-          main.classList.remove('visible');
-        }
-        
-        if (preloader) {
-          preloader.classList.remove('fade-out');
-        }
-        
-        setTimeout(() => {
-          window.location.href = href;
-        }, 550);
-      }
+    if (
+      href &&
+      href !== '#' &&
+      !href.startsWith('#') &&
+      !href.startsWith('tel:') &&
+      !href.startsWith('mailto:') &&
+      target !== '_blank' &&
+      !e.ctrlKey &&
+      !e.metaKey &&
+      !e.shiftKey
+    ) {
+      e.preventDefault();
+
+      // Set transition flag
+      sessionStorage.setItem('pageTransitioning', 'true');
+
+      // Fade main out
+      if (main) main.classList.remove('visible');
+
+      // Show preloader overlay
+      if (preloader) preloader.classList.remove('fade-out');
+
+      // Navigate after fade completes (~450ms)
+      setTimeout(() => {
+        window.location.href = href;
+      }, 450);
     }
   });
 }
