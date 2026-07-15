@@ -93,6 +93,13 @@
               visibility 0.8s cubic-bezier(0.85, 0, 0.15, 1);
 }
 
+.no-page-transition .preloader {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  display: none !important;
+  transition: none !important;
+}
+
 .preloader.fade-out {
   opacity: 0;
   visibility: hidden;
@@ -105,7 +112,16 @@
   letter-spacing: 0.15em;
   color: #111111;
   text-transform: uppercase;
+  text-align: center;
   animation: logo-reveal-in 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@media (max-width: 640px) {
+  .preloader-logo {
+    font-size: 1.75rem;
+    letter-spacing: 0.1em;
+    padding: 0 1.5rem;
+  }
 }
 
 @keyframes logo-reveal-in {
@@ -127,6 +143,12 @@ main {
   transform: translateY(15px);
   transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1),
               transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.no-page-transition main {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  transition: none !important;
 }
 
 main.visible {

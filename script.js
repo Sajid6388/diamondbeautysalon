@@ -97,32 +97,45 @@ function highlightActiveLink() {
 function setupPageTransitions() {
   const preloader = document.getElementById('preloader');
   const main = document.querySelector('main');
-  
-  // Initially make main hidden if preloader exists
-  if (preloader && main) {
-    main.style.opacity = '0';
-    main.style.transform = 'translateY(15px)';
-  }
+  const isTransitioning = sessionStorage.getItem('pageTransitioning') === 'true';
 
-  const revealPage = () => {
+  if (!isTransitioning) {
     if (preloader) {
       preloader.classList.add('fade-out');
     }
     if (main) {
-      setTimeout(() => {
-        main.classList.add('visible');
-        main.style.opacity = '';
-        main.style.transform = '';
-      }, 200);
+      main.classList.add('visible');
     }
-  };
+  } else {
+    // Clear transitioning flag so subsequent loads or refreshes do not show the preloader
+    sessionStorage.removeItem('pageTransitioning');
 
-  if (preloader) {
-    window.addEventListener('load', revealPage);
-    // Safety fallback
-    setTimeout(revealPage, 2500);
-  } else if (main) {
-    main.classList.add('visible');
+    // Initially make main hidden if preloader exists
+    if (preloader && main) {
+      main.style.opacity = '0';
+      main.style.transform = 'translateY(15px)';
+    }
+
+    const revealPage = () => {
+      if (preloader) {
+        preloader.classList.add('fade-out');
+      }
+      if (main) {
+        setTimeout(() => {
+          main.classList.add('visible');
+          main.style.opacity = '';
+          main.style.transform = '';
+        }, 200);
+      }
+    };
+
+    if (preloader) {
+      window.addEventListener('load', revealPage);
+      // Safety fallback
+      setTimeout(revealPage, 2500);
+    } else if (main) {
+      main.classList.add('visible');
+    }
   }
 
   // Intercept local page link clicks for fade out transition
@@ -145,8 +158,16 @@ function setupPageTransitions() {
         !e.shiftKey
       ) {
         e.preventDefault();
+
+        // Set transition flag in storage
+        sessionStorage.setItem('pageTransitioning', 'true');
+
+        // Remove the helper class that bypasses transition
+        document.documentElement.classList.remove('no-page-transition');
         
         if (main) {
+          main.style.opacity = '';
+          main.style.transform = '';
           main.classList.remove('visible');
         }
         
