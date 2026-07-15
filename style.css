@@ -1,0 +1,176 @@
+/* Diamond Beauty Luxury Website Shared Stylesheet */
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #fff8f3;
+}
+::-webkit-scrollbar-thumb {
+  background: #e5d8ca;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C9A227;
+}
+
+/* Glassmorphism Accents */
+.glass-card {
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+/* Gold Button Glow & Interactions */
+.gold-glow {
+  box-shadow: 0 10px 25px rgba(201, 162, 39, 0.15);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.gold-glow:hover {
+  box-shadow: 0 15px 30px rgba(201, 162, 39, 0.35);
+  transform: translateY(-2px);
+}
+.gold-glow:active {
+  transform: translateY(0) scale(0.95);
+}
+
+/* Base Shadow utility for general premium depth */
+.luxury-shadow {
+  box-shadow: 0 20px 40px rgba(201, 162, 39, 0.05);
+}
+
+/* Scroll Reveal Animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Mobile Drawer Styles */
+#mobile-menu {
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateX(100%);
+}
+
+#mobile-menu.active {
+  transform: translateX(0);
+}
+
+/* Smooth Image Reveal Hover */
+.image-reveal {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-reveal img {
+  transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.image-reveal:hover img {
+  transform: scale(1.05);
+}
+
+/* Page Transition Preloader overlay */
+.preloader {
+  position: fixed;
+  inset: 0;
+  background: #fff8f3; /* Warm Beige */
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.8s cubic-bezier(0.85, 0, 0.15, 1),
+              visibility 0.8s cubic-bezier(0.85, 0, 0.15, 1);
+}
+
+.preloader.fade-out {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.preloader-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.25rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: #111111;
+  text-transform: uppercase;
+  animation: logo-reveal-in 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@keyframes logo-reveal-in {
+  0% {
+    opacity: 0;
+    letter-spacing: 0.05em;
+    transform: scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    letter-spacing: 0.25em;
+    transform: scale(1);
+  }
+}
+
+/* Main Content Fade Transition */
+main {
+  opacity: 0;
+  transform: translateY(15px);
+  transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1),
+              transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+main.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* Consistent Nav Link Hover Underline Effect */
+.nav-link {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 50%;
+  background-color: #C9A227; /* Luxury Gold */
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link:hover {
+  color: #755b00 !important; /* Gold text */
+}
+
+/* Responsive Google Map container styling */
+.map-iframe-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  filter: grayscale(20%) sepia(20%) brightness(95%);
+  transition: filter 0.5s ease;
+}
+
+.map-iframe-container:hover iframe {
+  filter: grayscale(0%) sepia(0%) brightness(100%);
+}
+

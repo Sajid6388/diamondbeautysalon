@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Diamond Beauty Salon</title>
+    <meta name="description" content="Connect with Diamond Beauty Salon. Send an inquiry or find our location in Kumaramputhur, Kerala.">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+    try {
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-container": "#1c1b1b",
+                        "on-primary": "#ffffff",
+                        "surface-tint": "#5f5e5e",
+                        "secondary-fixed": "#ffe08e",
+                        "primary": "#000000",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-container": "#735a00",
+                        "error": "#ba1a1a",
+                        "on-surface": "#211b12",
+                        "tertiary": "#000000",
+                        "on-secondary-fixed-variant": "#584400",
+                        "tertiary-fixed-dim": "#d2c4b2",
+                        "on-secondary-fixed": "#241a00",
+                        "secondary-container": "#fed255",
+                        "on-tertiary-container": "#8e8272",
+                        "surface-container-high": "#f3e6d8",
+                        "surface-variant": "#ede0d3",
+                        "background": "#fff8f3",
+                        "tertiary-container": "#221a0f",
+                        "on-tertiary-fixed": "#221a0f",
+                        "inverse-surface": "#362f26",
+                        "inverse-primary": "#c8c6c5",
+                        "surface-container-low": "#fff2e3",
+                        "outline": "#747878",
+                        "surface-container-highest": "#ede0d3",
+                        "on-tertiary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "primary-fixed": "#e5e2e1",
+                        "primary-fixed-dim": "#c8c6c5",
+                        "on-error-container": "#93000a",
+                        "surface-container": "#f9ecde",
+                        "surface": "#fff8f3",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed-variant": "#474646",
+                        "surface-bright": "#fff8f3",
+                        "on-primary-fixed": "#1c1b1b",
+                        "outline-variant": "#c4c7c7",
+                        "on-tertiary-fixed-variant": "#4f4538",
+                        "on-secondary": "#ffffff",
+                        "inverse-on-surface": "#fcefe0",
+                        "secondary-fixed-dim": "#ecc246",
+                        "on-surface-variant": "#444748",
+                        "surface-dim": "#e5d8ca",
+                        "tertiary-fixed": "#efe0cd",
+                        "on-background": "#211b12",
+                        "secondary": "#755b00",
+                        "on-primary-container": "#858383"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "container-max": "1280px",
+                        "unit": "8px",
+                        "margin-mobile": "20px",
+                        "gutter": "24px",
+                        "section-gap": "120px"
+                    },
+                    "fontFamily": {
+                        "headline-sm": ["Playfair Display"],
+                        "body-lg": ["Montserrat"],
+                        "body-md": ["Montserrat"],
+                        "display-lg-mobile": ["Playfair Display"],
+                        "headline-md": ["Playfair Display"],
+                        "display-lg": ["Playfair Display"],
+                        "label-md": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1em", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    } catch (_e) {}
+    </script>
+    
+    <!-- Shared Styles -->
+    <link href="style.css" rel="stylesheet">
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+
+    <!-- Preloader Transition Screen -->
+    <div id="preloader" class="preloader">
+        <div class="preloader-logo">DIAMOND BEAUTY SALON</div>
+    </div>
+
+    <!-- TopNavBar -->
+    <header class="bg-surface/80 backdrop-blur-md dark:bg-primary-container/80 docked full-width top-0 sticky z-50 border-b border-white/20 shadow-[0_20px_40px_rgba(201,162,39,0.05)] transition-all duration-300">
+        <nav class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+            <a href="index.html" class="font-headline-sm text-headline-sm font-bold tracking-widest text-primary dark:text-on-primary">
+                DIAMOND BEAUTY SALON
+            </a>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="index.html" class="nav-link" id="nav-home">Home</a>
+                <a href="services.html" class="nav-link" id="nav-services">Services</a>
+                <a href="gallery.html" class="nav-link" id="nav-gallery">Gallery</a>
+                <a href="about.html" class="nav-link" id="nav-about">About Us</a>
+                <a href="contact.html" class="nav-link" id="nav-contact">Contact</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="booking.html" class="hidden sm:inline-block bg-[#C9A227] text-primary px-6 py-2 rounded-full font-label-md text-label-md gold-glow transition-all active:scale-95 text-center">
+                    Book Appointment
+                </a>
+                <!-- Mobile Hamburger Button -->
+                <button class="md:hidden text-primary dark:text-on-primary mobile-menu-trigger focus:outline-none">
+                    <span class="material-symbols-outlined text-3xl">menu</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="relative">
+        <!-- Background Decoration -->
+        <div class="absolute top-0 right-0 w-1/3 h-screen bg-surface-container-high/20 -z-10 pointer-events-none"></div>
+        
+        <!-- Hero Section -->
+        <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap pt-16">
+            <div class="grid md:grid-cols-2 gap-gutter items-end">
+                <div class="space-y-6">
+                    <h1 class="font-display-lg text-display-lg leading-tight reveal">Connect With <br><span class="text-secondary">Elegance</span></h1>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant max-w-md reveal">
+                        Step into a world of curated beauty. Whether you have a question about our bespoke treatments or wish to secure your next indulgence, our team is here for you.
+                    </p>
+                </div>
+                <div class="flex flex-col md:items-end space-y-4 reveal">
+                    <div class="flex items-center gap-4 text-secondary">
+                        <span class="material-symbols-outlined text-3xl">call</span>
+                        <a href="tel:9311649802" class="font-headline-sm text-headline-sm hover:underline">9311649802</a>
+                    </div>
+                    <div class="flex items-center gap-4 text-on-surface-variant">
+                        <span class="material-symbols-outlined text-3xl">mail</span>
+                        <a href="mailto:diamondbeautysalon63@gmail.com" class="font-body-lg text-body-lg hover:underline">diamondbeautysalon63@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Interaction Area -->
+        <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pb-section-gap">
+            <div class="grid lg:grid-cols-12 gap-gutter items-start">
+                
+                <!-- Contact Form Card -->
+                <div class="lg:col-span-7 glass-card rounded-xl p-8 md:p-12 shadow-xl relative overflow-hidden reveal">
+                    <div class="absolute top-0 left-0 w-2 h-full bg-[#C9A227]"></div>
+                    <h2 class="font-headline-md text-headline-md mb-8">Send an Inquiry</h2>
+                    
+                    <div id="contact-form-container">
+                        <form class="space-y-8" id="inquiry-form">
+                            <div class="grid md:grid-cols-2 gap-8">
+                                <div class="relative">
+                                    <label class="block font-label-md text-label-md text-secondary mb-2 uppercase tracking-widest">Name</label>
+                                    <input type="text" name="name" required class="w-full bg-transparent border-0 border-b border-outline-variant py-2 focus:ring-0 focus:border-secondary transition-colors gold-glow font-body-md" placeholder="Enter your full name">
+                                </div>
+                                <div class="relative">
+                                    <label class="block font-label-md text-label-md text-secondary mb-2 uppercase tracking-widest">Phone Number</label>
+                                    <input type="tel" name="phone" required class="w-full bg-transparent border-0 border-b border-outline-variant py-2 focus:ring-0 focus:border-secondary transition-colors gold-glow font-body-md" placeholder="+91 00000 00000">
+                                </div>
+                            </div>
+                            <div class="relative">
+                                <label class="block font-label-md text-label-md text-secondary mb-2 uppercase tracking-widest">Email Address</label>
+                                <input type="email" name="email" required class="w-full bg-transparent border-0 border-b border-outline-variant py-2 focus:ring-0 focus:border-secondary transition-colors gold-glow font-body-md" placeholder="yourname@luxury.com">
+                            </div>
+                            <div class="relative">
+                                <label class="block font-label-md text-label-md text-secondary mb-2 uppercase tracking-widest">Your Message</label>
+                                <textarea name="message" rows="4" required class="w-full bg-transparent border-0 border-b border-outline-variant py-2 focus:ring-0 focus:border-secondary transition-colors gold-glow font-body-md resize-none" placeholder="How can we assist your beauty journey today?"></textarea>
+                            </div>
+                            <div class="pt-4">
+                                <button type="submit" class="bg-primary text-secondary-fixed px-12 py-4 rounded-lg font-label-md text-label-md font-bold uppercase tracking-widest hover:bg-[#C9A227] hover:text-primary transition-all duration-300 shadow-lg">
+                                    Send Message
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Info & Socials -->
+                <div class="lg:col-span-5 space-y-8 reveal">
+                    <div class="glass-card rounded-xl p-8 shadow-sm">
+                        <h3 class="font-headline-sm text-headline-sm mb-6 flex items-center gap-3">
+                            <span class="material-symbols-outlined text-secondary">location_on</span>ADDRESS
+                        </h3>
+                        <p class="font-body-lg text-body-lg text-on-surface-variant mb-6 leading-relaxed">
+                            Diamond beauty salon, SH59, Kumaramputhur Chungam,&nbsp;
+                            <span class="block">Kumaramputhur, Kerala 678583</span>
+                        </p>
+                        <div class="space-y-4 border-t border-outline-variant pt-6">
+                            <div class="flex justify-between items-center">
+                                <span class="font-label-md text-label-md uppercase tracking-widest text-secondary">Instagram</span>
+                                <a href="https://www.instagram.com/dimond_beuty_saloon?igsh=Nm9pbHF2bmpicjZi" target="_blank" class="font-body-md text-body-md hover:text-secondary transition-colors border-b border-secondary">@dimond_beuty_saloon</a>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="font-label-md text-label-md uppercase tracking-widest text-secondary">Hours</span>
+                                <span class="font-body-md text-body-md">Mon — Sun: 9am - 8pm</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Map Container -->
+                    <div class="rounded-xl overflow-hidden shadow-2xl relative h-80 group map-iframe-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.634125866164!2d76.42671191480267!3d10.987711792178224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba7d5a0c18f2f9b%3A0x7b8a75df62cfe8b8!2sSH59%2C%20Kumaramputhur%20Chungam%2C%20Kumaramputhur%2C%20Kerala%20678583!5e0!3m2!1sen!2sin!4v1784111589165!5m2!1sen!2sin" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <div class="absolute inset-0 bg-secondary/5 pointer-events-none mix-blend-color"></div>
+                        <a href="https://maps.app.goo.gl/6dwpbwBq9teBCoBE7" target="_blank" class="absolute bottom-6 left-6 right-6 glass-card p-4 rounded-lg flex items-center justify-between hover:bg-secondary/10 transition-colors">
+                            <span class="font-label-md text-label-md text-primary">Open in Maps</span>
+                            <span class="material-symbols-outlined text-secondary">near_me</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Atmospheric Visual -->
+        <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pb-section-gap reveal">
+            <div class="relative h-[400px] rounded-xl overflow-hidden shadow-inner">
+                <div class="w-full h-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAGS1tK0_QsShEYkOwaWdcyH0FcZyOMrL1l6CwJs5w2323XkzbWzo1-wjlmCj5D_2BxD-qQJKGAoRiYzy40464fjjoEn5x3OZkHyfDf4zpmxkgjRKOLbft1qdkK-t_I2AY72-LEMJSQ_QROBWX-U7ddp1w-4OCfxDzwx0l_2W2Akp0UdsoiujNQU66ui-pz22clQ6bNAKtNXWHIp16Q1kxCUUH-zEdr87C_J3WAntdpw4PHfuQwNpcYdxrHYfWSjOwZAGVav3Zr9VU');"></div>
+                <div class="absolute inset-0 bg-primary/20 backdrop-blur-[2px]"></div>
+                <div class="absolute inset-0 flex items-center justify-center text-center">
+                    <div class="max-w-2xl px-6">
+                        <span class="font-label-md text-label-md text-secondary-fixed uppercase tracking-[0.3em] mb-4 block">Unmatched Excellence</span>
+                        <h2 class="font-display-lg text-headline-md md:text-display-lg text-on-primary mb-6">Experience the pinnacle of personal care.</h2>
+                        <a class="inline-block border border-secondary-fixed text-secondary-fixed px-10 py-3 rounded-full font-label-md hover:bg-secondary-fixed hover:text-primary transition-all" href="about.html">Discover Our Story</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary dark:bg-primary-container full-width">
+        <div class="flex flex-col md:flex-row justify-between items-start w-full px-margin-mobile md:px-margin-desktop py-section-gap max-w-container-max mx-auto">
+            <div class="mb-12 md:mb-0 space-y-6">
+                <div class="mb-6">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlJeXj2jSQS-E32yR4aXwAb7r_95y5zdSMJ4iEN83rYrInB3Ds6lvw8U2bZXn9lSzr1U7ysOSn-ZWpxshk-47x5kfsaVItB7G4fDBYbt6rPmkH13FVLDE6GYdaVDclOq7R_4ZHKvnMQMbw1HWQ9upiRoZpE7CF3VbU9RIxlUSwgJCZL3RFHHB0naN_2q-gUQPJ-juYI_DrMnKZMT_oLn3usNmyB1pHBInDRLqtGuVZP3fNrzuCUJRnmdQHp2JBuQZ6h1HI2wed68I" alt="Diamond Beauty Salon Logo" class="h-32 w-auto object-contain">
+                </div>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-x-12 gap-y-8">
+                <div class="flex flex-col gap-4">
+                    <h4 class="text-secondary-fixed font-semibold font-label-md uppercase tracking-widest">Navigation</h4>
+                    <a class="text-on-primary-container hover:text-secondary-fixed transition-colors hover:underline decoration-secondary-fixed underline-offset-4" href="index.html">Home</a>
+                    <a class="text-on-primary-container hover:text-secondary-fixed transition-colors hover:underline decoration-secondary-fixed underline-offset-4" href="services.html">Services</a>
+                    <a class="text-on-primary-container hover:text-secondary-fixed transition-colors hover:underline decoration-secondary-fixed underline-offset-4" href="gallery.html">Gallery</a>
+                    <a class="text-on-primary-container hover:text-secondary-fixed transition-colors hover:underline decoration-secondary-fixed underline-offset-4" href="about.html">About Us</a>
+                    <a class="text-on-primary-container hover:text-secondary-fixed transition-colors hover:underline decoration-secondary-fixed underline-offset-4" href="contact.html">Contact</a>
+                </div>
+                <div class="flex flex-col gap-4">
+                    <h4 class="text-secondary-fixed font-semibold font-label-md uppercase tracking-widest">Experience</h4>
+                    <a class="text-on-primary-container hover:text-secondary-fixed transition-colors hover:underline decoration-secondary-fixed underline-offset-4" href="booking.html">Book Appointment</a>
+                </div>
+                <div class="flex flex-col gap-4">
+                    <h4 class="text-secondary-fixed font-semibold font-label-md uppercase tracking-widest">Contact Info</h4>
+                    <span class="text-on-primary-container font-body-md text-body-md">9311649802</span>
+                    <span class="text-on-primary-container font-body-md text-body-md">diamondbeautysalon63@gmail.com</span>
+                    <div class="pt-4 flex gap-4">
+                        <a class="w-10 h-10 flex items-center justify-center border border-on-primary/20 rounded-full hover:border-secondary-fixed transition-all text-on-primary hover:text-secondary-fixed" href="https://www.instagram.com/dimond_beuty_saloon?igsh=Nm9pbHF2bmpicjZi" target="_blank" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-full px-margin-mobile md:px-margin-desktop py-8 border-t border-white/5 max-w-container-max mx-auto text-center md:text-left">
+            <span class="text-on-primary-container font-label-md text-label-md opacity-60">
+                © 2024 DIAMOND BEAUTY SALON. All rights reserved.
+            </span>
+        </div>
+    </footer>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="fixed inset-y-0 right-0 z-50 w-80 max-w-[85%] h-full bg-background/95 backdrop-blur-md p-8 flex flex-col justify-between border-l border-white/20 shadow-2xl transition-transform duration-300 translate-x-full">
+        <div>
+            <div class="flex justify-between items-center mb-12">
+                <span class="font-headline-sm text-lg font-bold tracking-widest text-primary">DIAMOND</span>
+                <button class="close-menu-btn text-primary hover:text-secondary transition-colors focus:outline-none">
+                    <span class="material-symbols-outlined text-3xl">close</span>
+                </button>
+            </div>
+            <div class="flex flex-col gap-6">
+                <a href="index.html" class="text-on-surface hover:text-secondary transition-colors text-lg font-body-md">Home</a>
+                <a href="services.html" class="text-on-surface hover:text-secondary transition-colors text-lg font-body-md">Services</a>
+                <a href="gallery.html" class="text-on-surface hover:text-secondary transition-colors text-lg font-body-md">Gallery</a>
+                <a href="about.html" class="text-on-surface hover:text-secondary transition-colors text-lg font-body-md">About Us</a>
+                <a href="contact.html" class="text-secondary font-bold text-lg font-body-md">Contact</a>
+            </div>
+        </div>
+        <div class="space-y-6">
+            <a href="booking.html" class="w-full bg-[#C9A227] text-primary text-center font-bold py-4 px-6 rounded-lg block tracking-wider uppercase transition-all hover:brightness-110 gold-glow">
+                Book Appointment
+            </a>
+            <p class="text-xs text-on-surface-variant/50 text-center">© 2024 DIAMOND BEAUTY SALON</p>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js" defer></script>
+</body>
+</html>

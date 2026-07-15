@@ -1,0 +1,242 @@
+<!DOCTYPE html><html lang="en" class="scroll-smooth" style=""><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Montserrat:wght@300;400;600&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet"><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">try{
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-container": "#1c1b1b",
+                    "on-primary": "#ffffff",
+                    "surface-tint": "#5f5e5e",
+                    "secondary-fixed": "#ffe08e",
+                    "primary": "#000000",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-container": "#735a00",
+                    "error": "#ba1a1a",
+                    "on-surface": "#211b12",
+                    "tertiary": "#000000",
+                    "on-secondary-fixed-variant": "#584400",
+                    "tertiary-fixed-dim": "#d2c4b2",
+                    "on-secondary-fixed": "#241a00",
+                    "secondary-container": "#fed255",
+                    "on-tertiary-container": "#8e8272",
+                    "surface-container-high": "#f3e6d8",
+                    "surface-variant": "#ede0d3",
+                    "background": "#fff8f3",
+                    "tertiary-container": "#221a0f",
+                    "on-tertiary-fixed": "#221a0f",
+                    "inverse-surface": "#362f26",
+                    "inverse-primary": "#c8c6c5",
+                    "surface-container-low": "#fff2e3",
+                    "outline": "#747878",
+                    "surface-container-highest": "#ede0d3",
+                    "on-tertiary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "primary-fixed": "#e5e2e1",
+                    "primary-fixed-dim": "#c8c6c5",
+                    "on-error-container": "#93000a",
+                    "surface-container": "#f9ecde",
+                    "surface": "#fff8f3",
+                    "on-error": "#ffffff",
+                    "on-primary-fixed-variant": "#474646",
+                    "surface-bright": "#fff8f3",
+                    "on-primary-fixed": "#1c1b1b",
+                    "outline-variant": "#c4c7c7",
+                    "on-tertiary-fixed-variant": "#4f4538",
+                    "on-secondary": "#ffffff",
+                    "inverse-on-surface": "#fcefe0",
+                    "secondary-fixed-dim": "#ecc246",
+                    "on-surface-variant": "#444748",
+                    "surface-dim": "#e5d8ca",
+                    "tertiary-fixed": "#efe0cd",
+                    "on-background": "#211b12",
+                    "secondary": "#755b00",
+                    "on-primary-container": "#858383"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-desktop": "64px",
+                    "container-max": "1280px",
+                    "unit": "8px",
+                    "margin-mobile": "20px",
+                    "gutter": "24px",
+                    "section-gap": "120px"
+            },
+            "fontFamily": {
+                    "headline-sm": ["Playfair Display"],
+                    "body-lg": ["Montserrat"],
+                    "body-md": ["Montserrat"],
+                    "display-lg-mobile": ["Playfair Display"],
+                    "headline-md": ["Playfair Display"],
+                    "display-lg": ["Playfair Display"],
+                    "label-md": ["Montserrat"]
+            },
+            "fontSize": {
+                    "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    }catch(_e){}</script><meta charset="utf-8"></head><body class="bg-background text-on-surface font-body-md selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<!-- TopNavBar -->
+<nav class="docked full-width top-0 sticky z-50 bg-surface/80 backdrop-blur-md border-b border-white/20 shadow-[0_20px_40px_rgba(201,162,39,0.05)]">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="font-headline-sm text-headline-sm font-bold tracking-widest text-primary">DIAMOND BEAUTY SALON</div>
+<!-- Desktop Links -->
+<div class="hidden md:flex items-center space-x-8"><a href="#" class="text-on-surface-variant hover:text-secondary transition-colors font-body-md text-body-md">Home</a>
+<a href="#" class="text-on-surface-variant hover:text-secondary transition-colors font-body-md text-body-md">Services</a>
+<a href="#" class="text-on-surface-variant hover:text-secondary transition-colors font-body-md text-body-md">Gallery</a>
+<a href="#" class="text-secondary font-bold border-b-2 border-secondary pb-1 font-body-md text-body-md">About Us</a>
+<a href="#" class="text-on-surface-variant hover:text-secondary transition-colors font-body-md text-body-md">Contact</a>
+<button class="bg-primary text-secondary-fixed px-6 py-2 rounded-full font-label-md text-label-md uppercase tracking-wider hover:bg-secondary hover:text-white transition-all duration-300 gold-glow">
+                    Book Appointment
+                </button></div>
+<!-- Mobile Menu Trigger -->
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<header class="relative h-[60vh] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-black/30 z-10"></div>
+<div class="bg-cover bg-center w-full h-full scale-105 transform hover:scale-100 transition-transform duration-[5s]" data-alt="A cinematic, high-end close-up of a luxury salon interior with warm golden lighting, minimalist furniture, and marble textures. The atmosphere is serene and expensive, reflecting a quiet luxury aesthetic with deep shadows and soft highlights in a warm beige and gold color palette." style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuCILwgqfu4CVuiS9-R_viGxk4HSPYbmsAXfOh1E7Ss2IImaO4w-X3ZLkMhOelyjS7CSYp9d2lAGv_89MR20I_uJo01We_yMrpx58O5lrVejNuAA1shcmg7b2XRz5h7Z4ftIALCRVAxcMgawiQhQA-CLDLxB3Dd0H09tPBWQeQJVYPV82B9PMNEP1QZRx0v_ySXHeQ2nUJRJm1TbtoaF2WnUNWWCZ_kDNvHGi294nYWZlLaE15lPciTnP6I5P-1wiei83DWyaoU45l0&quot;);"></div>
+</div>
+<div class="relative z-20 w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-on-primary">
+<p class="font-label-md text-label-md uppercase tracking-[0.3em] mb-4 opacity-90">Est. 1998</p>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-6 leading-tight">Our Legacy of <br><span class="italic font-normal">Exquisite Beauty</span></h1>
+</div>
+</header>
+<!-- Our Story Section -->
+
+<!-- Mission & Vision Section (Bento Style) -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    <div class="relative group overflow-hidden rounded-lg">
+      <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpNu2MQHa-nwG1dZN07uQEs-7zDu1U8CW851RJ9aBkmhrGBegfTdO_jFHUlwscJy809E3ysDE5gX67SCLAP88xyFk2aBtwU--oRd68tMcXpzcUlpxt6Kw74Dtgc0EFRMhUQ8zpj8S5XBPfzSTC_ddM93S5nqRZLIQ61HHOY08aelpbad2PVhq8p1f4wVETNRFpJQES46VjRdc4UEz7TqgSjAmFVlvF9x6v2JNa8Owou-HkaL-i4GU1C4A1jLO5ZUF87u2QJqhSSFg" alt="Sajid - Founder of Diamond Beauty Salon" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 transform hover:scale-105">
+      <div class="absolute inset-0 border border-secondary/20 pointer-events-none m-4"></div>
+    </div>
+    <div class="space-y-6">
+      <div class="space-y-2">
+        <h2 class="font-headline-sm text-headline-sm text-secondary uppercase tracking-widest">Meet Our Founder</h2>
+        <h3 class="font-display-lg text-display-lg-mobile md:text-headline-md text-primary">SAJID</h3>
+        <p class="font-body-lg text-body-lg italic text-secondary">The Visionary Behind the Excellence</p>
+      </div>
+      <div class="w-20 h-px bg-secondary/30"></div>
+      <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+        Sajid brings expertise in high-end grooming, dedicated to redefining the standards of beauty and personal care at Diamond Beauty Salon. His philosophy blends traditional craftsmanship with modern innovation, ensuring every client experiences the pinnacle of luxury and refinement.
+      </p>
+      <div class="pt-4">
+        
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Why Choose Us Section -->
+
+<!-- CTA Section -->
+<section class="py-section-gap relative">
+<div class="absolute inset-0 z-0">
+
+</div>
+<div class="relative z-10 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center">
+<div class="glass-card py-20 px-10 max-w-4xl mx-auto border-secondary/20">
+<h2 class="font-headline-md text-headline-md text-primary mb-6">Experience the Diamond Difference</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10">
+                        Join our exclusive circle of clients and discover a world where every detail is tailored to your perfection.
+                    </p>
+<button class="bg-primary text-secondary-fixed px-12 py-4 rounded-full font-label-md text-label-md uppercase tracking-[0.2em] hover:bg-secondary hover:text-white transition-all duration-500 gold-glow">
+                        Schedule Your Consult
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary dark:bg-primary-container text-secondary-fixed">
+<div class="flex flex-col md:flex-row justify-between items-start w-full px-margin-mobile md:px-margin-desktop py-section-gap max-w-container-max mx-auto">
+<div class="mb-10 md:mb-0 space-y-6">
+<div class="mb-6"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaWWy0ub10skTrYjQvNte0HNb38Apo8PNXsNexrpMTm4ZM59o0XfI4242-GEDnyQ3NECcse-swPh8IXtT7bGcNmcfq0FBW8YoDD6SE79K4P98qZZOm3lAffTroM7wdSmFhmzfff13pT4o5xuY-izf01JkQATClQjqlQEMsVkZR4LCrpLC6CKkcpUAxeH_SzMqBQ4ECK0zbVj8T31ta1EkAT7Y4-SsPqBgRMmEq8PtpD_NJF9rCy5jh9hMwTcY_JxCYxc2KnPtkiFA" alt="Diamond Beauty Salon Logo" class="w-full max-w-[200px] h-auto object-contain"></div>
+
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-12">
+<div class="space-y-4">
+<h4 class="font-label-md text-label-md uppercase tracking-widest text-on-primary">Quick Links</h4>
+<ul class="space-y-2"><li class=""><a class="font-body-md text-body-md text-on-primary-container hover:text-secondary-fixed transition-colors hover:underline decoration-secondary-fixed underline-offset-4" href="#">Home</a></li>
+<li class=""><a class="font-body-md text-body-md text-on-primary-container hover:text-secondary-fixed transition-colors hover:underline decoration-secondary-fixed underline-offset-4" href="#">Services</a></li>
+<li class=""><a class="font-body-md text-body-md text-on-primary-container hover:text-secondary-fixed transition-colors hover:underline decoration-secondary-fixed underline-offset-4" href="#">Gallery</a></li>
+<li class=""><a class="font-body-md text-body-md text-secondary-fixed font-semibold hover:underline decoration-secondary-fixed underline-offset-4" href="#">About Us</a></li>
+<li class=""><a class="font-body-md text-body-md text-on-primary-container hover:text-secondary-fixed transition-colors hover:underline decoration-secondary-fixed underline-offset-4" href="#">Contact</a></li></ul>
+</div>
+<div class="space-y-4"><h4 class="font-label-md text-label-md uppercase tracking-widest text-on-primary">Experience</h4>
+<ul class="space-y-2">
+<li class=""><a class="font-body-md text-body-md text-on-primary-container hover:text-secondary-fixed transition-colors hover:underline decoration-secondary-fixed underline-offset-4" href="#">Book Appointment</a></li>
+<li class=""></li>
+<li class=""></li>
+</ul></div>
+<div class="col-span-2 md:col-span-1 space-y-4"><div class="space-y-4 mb-8">
+<h4 class="font-label-md text-label-md uppercase tracking-widest text-on-primary">Contact Info</h4>
+<ul class="space-y-2">
+<li class="font-body-md text-body-md text-on-primary-container">9311649802</li>
+<li class="font-body-md text-body-md text-on-primary-container">diamondbeautysalon63@gmail.com</li>
+</ul>
+</div>
+
+<div class="flex gap-4">
+
+
+</div>
+</div>
+</div>
+</div>
+<div class="w-full px-margin-mobile md:px-margin-desktop py-8 border-t border-white/10 max-w-container-max mx-auto">
+<p class="font-label-md text-label-md opacity-50">© 2024 DIAMOND BEAUTY SALON. All rights reserved.</p>
+</div>
+</footer>
+<script>
+        // Simple scroll reveal interaction for sections
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                    entry.target.classList.remove('translate-y-10');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-1000', 'translate-y-10', 'opacity-0');
+            observer.observe(section);
+        });
+
+        // Sticky Navbar subtle transformation
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('py-2', 'shadow-md');
+                nav.classList.remove('py-4');
+            } else {
+                nav.classList.add('py-4');
+                nav.classList.remove('py-2', 'shadow-md');
+            }
+        });
+    </script>
+
+</body></html>

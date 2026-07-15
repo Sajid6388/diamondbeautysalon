@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Diamond Beauty Salon</title>
+    <meta name="description" content="Witness the artistry and craftsmanship at Diamond Beauty Salon. Browse our portfolio of haircuts, styling, and beauty transformations.">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Montserrat:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+    try {
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+              "on-surface-variant": "#444748",
+              "secondary-fixed-dim": "#ecc246",
+              "surface-dim": "#e5d8ca",
+              "on-tertiary-fixed-variant": "#4f4538",
+              "on-secondary": "#ffffff",
+              "inverse-on-surface": "#fcefe0",
+              "secondary": "#755b00",
+              "on-primary-container": "#858383",
+              "tertiary-fixed": "#efe0cd",
+              "on-background": "#211b12",
+              "primary-fixed-dim": "#c8c6c5",
+              "on-error-container": "#93000a",
+              "surface-container-highest": "#ede0d3",
+              "primary-fixed": "#e5e2e1",
+              "on-tertiary": "#ffffff",
+              "error-container": "#ffdad6",
+              "outline": "#747878",
+              "outline-variant": "#c4c7c7",
+              "surface-bright": "#fff8f3",
+              "on-primary-fixed": "#1c1b1b",
+              "surface-container": "#f9ecde",
+              "surface": "#fff8f3",
+              "on-error": "#ffffff",
+              "on-primary-fixed-variant": "#474646",
+              "tertiary-container": "#221a0f",
+              "surface-variant": "#ede0d3",
+              "background": "#fff8f3",
+              "on-tertiary-fixed": "#221a0f",
+              "inverse-surface": "#362f26",
+              "tertiary-fixed-dim": "#d2c4b2",
+              "secondary-container": "#fed255",
+              "on-secondary-fixed": "#241a00",
+              "surface-container-high": "#f3e6d8",
+              "on-tertiary-container": "#8e8272",
+              "surface-container-low": "#fff2e3",
+              "inverse-primary": "#c8c6c5",
+              "primary-container": "#1c1b1b",
+              "surface-tint": "#5f5e5e",
+              "secondary-fixed": "#ffe08e",
+              "on-primary": "#ffffff",
+              "tertiary": "#000000",
+              "on-secondary-fixed-variant": "#584400",
+              "on-surface": "#211b12",
+              "on-secondary-container": "#735a00",
+              "error": "#ba1a1a",
+              "primary": "#000000",
+              "surface-container-lowest": "#ffffff"
+            },
+            "borderRadius": {
+              "DEFAULT": "0.25rem",
+              "lg": "0.5rem",
+              "xl": "0.75rem",
+              "full": "9999px"
+            },
+            "spacing": {
+              "section-gap": "120px",
+              "gutter": "24px",
+              "unit": "8px",
+              "margin-mobile": "20px",
+              "container-max": "1280px",
+              "margin-desktop": "64px"
+            },
+            "fontFamily": {
+              "label-md": ["Montserrat"],
+              "display-lg": ["Playfair Display"],
+              "headline-md": ["Playfair Display"],
+              "display-lg-mobile": ["Playfair Display"],
+              "body-md": ["Montserrat"],
+              "headline-sm": ["Playfair Display"],
+              "body-lg": ["Montserrat"]
+            },
+            "fontSize": {
+              "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.1em", "fontWeight": "600" }],
+              "display-lg": ["64px", { "lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+              "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+              "display-lg-mobile": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+              "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+              "headline-sm": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+              "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }]
+            }
+          },
+        },
+      }
+    } catch (_e) {}
+    </script>
+    
+    <!-- Shared Styles -->
+    <link href="style.css" rel="stylesheet">
+</head>
+<body class="bg-background text-on-background antialiased overflow-x-hidden">
+
+    <!-- Preloader Transition Screen -->
+    <div id="preloader" class="preloader">
+        <div class="preloader-logo">DIAMOND BEAUTY SALON</div>
+    </div>
+
+    <!-- TopNavBar -->
+    <header class="bg-surface/80 backdrop-blur-md dark:bg-primary-container/80 docked full-width top-0 sticky z-50 border-b border-white/20 shadow-[0_20px_40px_rgba(201,162,39,0.05)] transition-all duration-300">
+        <nav class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+            <a href="index.html" class="font-headline-sm text-headline-sm font-bold tracking-widest text-primary dark:text-on-primary">
+                DIAMOND BEAUTY SALON
+            </a>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="index.html" class="nav-link" id="nav-home">Home</a>
+                <a href="services.html" class="nav-link" id="nav-services">Services</a>
+                <a href="gallery.html" class="nav-link" id="nav-gallery">Gallery</a>
+                <a href="about.html" class="nav-link" id="nav-about">About Us</a>
+                <a href="contact.html" class="nav-link" id="nav-contact">Contact</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="booking.html" class="hidden sm:inline-block bg-[#C9A227] text-primary px-6 py-2 rounded-full font-label-md text-label-md gold-glow transition-all active:scale-95 text-center">
+                    Book Appointment
+                </a>
+                <!-- Mobile Hamburger Button -->
+                <button class="md:hidden text-primary dark:text-on-primary mobile-menu-trigger focus:outline-none">
+                    <span class="material-symbols-outlined text-3xl">menu</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative py-section-gap overflow-hidden">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center relative z-10">
+                <span class="font-label-md text-label-md text-secondary uppercase tracking-[0.2em] mb-4 block">Crafting Excellence</span>
+                <h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-8">
+                    Our <span class="italic font-normal">Artistry</span> Gallery
+                </h1>
+                <p class="max-w-2xl mx-auto font-body-lg text-body-lg text-on-surface-variant">
+                    Witness the transformation where precision meets personality. Our portfolio showcases the curated craftsmanship and refined aesthetic of Diamond Beauty Salon.
+                </p>
+            </div>
+            
+            <!-- Atmospheric Element -->
+            <div class="absolute -top-24 -right-24 w-96 h-96 bg-secondary/5 rounded-full blur-[100px] pointer-events-none"></div>
+        </section>
+
+        <!-- Interior Spotlight -->
+        <section class="pb-section-gap">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+                <div class="relative group overflow-hidden rounded-xl image-reveal">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuHkioo_ukOKtgJDCEYTdPXiV6iqhIOEe87y8h74wFhqhcqx9gNDIdrUbZ-2zBpQ6LJCa7zCbb9lkE97qj6ILCFCOAEL2EjU7RMwKsu9t2sFqvuNzbrO_6lEQroL4GGVfD0am81GLwGB6imEeYyUDzysg2_cxiwho0Xx_qqjzV-0fEYtO8L8UqeYpnfgt9j-lUCKAslCEePfjYAULfYlfRdmGwmG60m7vmWN3zqZj0vVi9vW6-pSK4CR2dC0YZS9EYLQNI2S_bEFY" alt="Luxury Salon Interior" class="w-full h-[500px] object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent flex flex-col justify-end p-12">
+                        <h2 class="font-headline-md text-headline-md text-secondary-fixed mb-2">The Sanctuary</h2>
+                        <p class="text-on-primary-container font-body-md text-body-md max-w-xl">
+                            A curated space designed for indulgence. Our interior reflects the quiet luxury and serenity we provide to every client.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Grid -->
+        <section class="pb-section-gap">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+                    
+                    <!-- Transformation 1 -->
+                    <div class="md:col-span-8 group reveal">
+                        <div class="glass-card rounded-xl overflow-hidden h-full">
+                            <div class="relative aspect-[16/9] image-reveal">
+                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-Aw6L5ml_OJJ7UwbFhheu-3bktmaQxWavFB73OQ0HLXJZwhyUw1QRlhAxgGP0p2J8kNhAOaYG-wCibMX-gGGrgOEhwadgbQTcjTcNnw1ybqDDoslnG_uV3daHfQBqSzEyUirX_5_oKkbPKAGbqMVxc343CzKMKuQ8hLWKOpLJgJvhhg1GeORl7RT4Fap18N3oB-3P1N3JYzCt7DgnvnKrnrI_hQhkf5XQLXdUP3o-VtG2OLZg9Dt4TE3F2FEMbHxUC6EET_Mp1d8" alt="Precision Styling" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-all duration-500"></div>
+                            </div>
+                            <div class="p-8">
+                                <h3 class="font-headline-sm text-headline-sm text-primary mb-2">Modern Classic Flow</h3>
+                                <p class="text-on-surface-variant font-body-md text-body-md">Refining natural movement with architectural precision and textured layering.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Transformation 2 -->
+                    <div class="md:col-span-4 group reveal">
+                        <div class="glass-card rounded-xl overflow-hidden h-full">
+                            <div class="relative aspect-[3/4] image-reveal">
+                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlK0tcLfOCYXNFZu_wdk5GBWo30FUFBJ5W7M5wgao_P4h-SU7JFbpE4_8wNhOk5oGYwqRhN0TeBfr8SQrlgjhRyj-lpVWBWuZCFhdJNgVk8mU__7DAJJb5WZEwlLkULx0R1dr2lkhBxv087WsqYKPuXEhLQgT5tj3s_XhACGzQMjJ6uOJbXZy9At3NB6fwgTwJ-5HwvY2sqhTSPaN9OosRzBdKcPrlDvGqZrm-1nA1inoZTo1BPdj2kUJVE3b3ot6D5YLBqj6k02c" alt="Perfect Fade" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-all duration-500"></div>
+                            </div>
+                            <div class="p-8">
+                                <h3 class="font-headline-sm text-headline-sm text-primary mb-2">The Sculpted Fade</h3>
+                                <p class="text-on-surface-variant font-body-md text-body-md">Precision graduation meets sharp contours for a timeless, powerful silhouette.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Professional at work -->
+                    <div class="md:col-span-4 group reveal">
+                        <div class="glass-card rounded-xl overflow-hidden h-full">
+                            <div class="relative aspect-square image-reveal">
+                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtiJtHJFT3ImPwHU3MZITPPP8gAkaa6tqM3jHX-swPkaHCiiyhK6VYSLJNOv5V3L0xYVukucjBao8FxGvVWz3mu9ZO9O7SQKS9WCQyoT2sAIVHgXRUlsLRlD0ypukCcGyevuXQv4WyMz-9URitSi0gT5NKv9CFQmbL1DExe4AQOAHtBWs5nwmYy0OqFcvAA7eP1rPFJRe8BriEUnfaJL9NIEMMjEgkt9xtafgZ0sd2z9N8hmOBM8loG20hCtcHmQiiHGevvwoizR8" alt="Stylist Portrait" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-all duration-500"></div>
+                            </div>
+                            <div class="p-8">
+                                <h3 class="font-headline-sm text-headline-sm text-primary mb-2">Artisanal Hands</h3>
+                                <p class="text-on-surface-variant font-body-md text-body-md">Our stylists are master craftsmen dedicated to the fine art of grooming.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Detailed work -->
+                    <div class="md:col-span-4 group reveal">
+                        <div class="glass-card rounded-xl overflow-hidden h-full">
+                            <div class="relative aspect-square image-reveal">
+                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8iEADAnpjD-Lg7A322DaekOttMmyS3fJPGvpqIke1sIKhVc066HWsQvduMsxSNIIr41mConYBh08c68Rgwq9NWTQEQTlYjcW3CpAi0eIfc9G_26VMIW8LDxQhY4QMMkGRl0Y633hoF8tAQpRl8lxyzPqTW-pEIeYHAabr1zL5tORv4bLSMC9R9jbpAvZqkz3YR_5HPRwJ8fQBZVnxOXl853GVFUe7tKo1d-73kJUUKfJQGHOkJZcfDVoDepf0ec35Doml_elG6-Q" alt="Detail Styling" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-all duration-500"></div>
+                            </div>
+                            <div class="p-8">
+                                <h3 class="font-headline-sm text-headline-sm text-primary mb-2">Precision Detailing</h3>
+                                <p class="text-on-surface-variant font-body-md text-body-md">The beauty is in the details. Every angle is considered, every line is intentional.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Stylist in-->
+                    <div class="md:col-span-4 group reveal">
+                        <div class="glass-card rounded-xl overflow-hidden h-full">
+                            <div class="relative aspect-square image-reveal">
+                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBl8r1c0Q3hSltLDr0yhChKc8utyjjT6CGm7EwzYAo-IcyJAcRnd8XfR7eggJ2C8zkJLCmD5l-KlF_CpvBa03Xd5o-Qcj8e-lItcKQeRuKJlUa1fxs7dOUOTGrRwqjiKoFdpTt0VCq6fj9B8uIM137eI1UUS60FGEoqk4-5qTH-k4sDdM-r1aJw1pdxwicgu3_bV9OU0QEzwGgFTQXoDfDQLxFbnhGKxBTvI535RY9bIN_LUXGa9sZoASDDSxmSD2qo2dmWXSRkIEw" alt="Stylist Working" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-all duration-500"></div>
+                            </div>
+                            <div class="p-8">
+                                <h3 class="font-headline-sm text-headline-sm text-primary mb-2">Dynamic Mastery</h3>
+                                <p class="text-on-surface-variant font-body-md text-body-md">Witnessing the flow of creativity during a high-stakes transformation.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Signature Experience CTA -->
+        <section class="py-section-gap bg-primary text-on-primary reveal">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row items-center justify-between gap-12">
+                <div class="max-w-xl text-center md:text-left">
+                    <h2 class="font-display-lg-mobile md:font-headline-md text-secondary-fixed mb-6 uppercase tracking-wider">Define Your Signature Look</h2>
+                    <p class="font-body-lg text-body-lg text-primary-fixed-dim">
+                        Ready to elevate your personal brand? Book your consultation with our elite stylists today.
+                    </p>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-6">
+                    <a href="booking.html" class="bg-secondary-fixed text-on-secondary-fixed px-10 py-5 rounded-full font-label-md text-label-md hover:scale-105 transition-transform luxury-shadow text-center inline-block">
+                        BOOK APPOINTMENT
+                    </a>
+                    <a href="services.html" class="border border-secondary-fixed text-secondary-fixed px-10 py-5 rounded-full font-label-md text-label-md hover:bg-secondary-fixed/10 transition-colors text-center inline-block">
+                        VIEW SERVICES
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary dark:bg-primary-container text-secondary-fixed border-t border-white/10">
+        <div class="flex flex-col md:flex-row justify-between items-start w-full px-margin-mobile md:px-margin-desktop py-section-gap max-w-container-max mx-auto">
+            <div class="mb-12 md:mb-0">
+                <div class="mb-6">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVImNSPBvv_BuMyZ0xWJkaO8YH_44OHWwdFdbGfRQWhxayGc8CzBc8tZdZ5Th4tRjdK710nr8Ik5xBalnKlq7YbaJPnF-auxMPPj2jSAwf4xlMDmgWx9oC2ZIOCDMglHzgWnxpj8pXK6aLOkjTHbYGANNNVpzpgjfbxSk06Yr-Ta3k3vOuy95Fwt-uTgRpZoswumXny9Vo-7wiP8OOf2TiufXjkzyPH8RPQX0RnSqm1delmk5GwG3tvfBbdffrWV_dvd6_KtfOTDQ" alt="Diamond Beauty Salon Logo" class="w-auto object-contain h-48">
+                </div>
+                <div class="flex gap-4">
+                    <a href="https://www.instagram.com/dimond_beuty_saloon?igsh=Nm9pbHF2bmpicjZi" target="_blank" class="w-10 h-10 rounded-full border border-secondary-fixed/30 flex items-center justify-center hover:bg-secondary-fixed hover:text-primary transition-all" aria-label="Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-16 md:grid-cols-3">
+                <div>
+                    <h4 class="font-label-md text-label-md uppercase tracking-widest text-on-primary-container mb-6">Quick Links</h4>
+                    <ul class="flex flex-col gap-4">
+                        <li><a class="text-on-primary-container hover:text-secondary-fixed transition-colors font-body-md text-body-md hover:underline decoration-secondary-fixed underline-offset-4" href="index.html">Home</a></li>
+                        <li><a class="text-on-primary-container hover:text-secondary-fixed transition-colors font-body-md text-body-md hover:underline decoration-secondary-fixed underline-offset-4" href="services.html">Services</a></li>
+                        <li><a class="text-secondary-fixed font-semibold font-body-md text-body-md hover:underline decoration-secondary-fixed underline-offset-4" href="gallery.html">Gallery</a></li>
+                        <li><a class="text-on-primary-container hover:text-secondary-fixed transition-colors font-body-md text-body-md hover:underline decoration-secondary-fixed underline-offset-4" href="about.html">About Us</a></li>
+                        <li><a class="text-on-primary-container hover:text-secondary-fixed transition-colors font-body-md text-body-md hover:underline decoration-secondary-fixed underline-offset-4" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-label-md text-label-md uppercase tracking-widest text-on-primary-container mb-6">Experience</h4>
+                    <ul class="flex flex-col gap-4">
+                        <li><a class="text-on-primary-container hover:text-secondary-fixed transition-colors font-body-md text-body-md hover:underline decoration-secondary-fixed underline-offset-4" href="booking.html">Book Appointment</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-label-md text-label-md uppercase tracking-widest text-on-primary-container mb-6">Contact Info</h4>
+                    <ul class="flex flex-col gap-4">
+                        <li class="text-on-primary-container font-body-md text-body-md">9311649802</li>
+                        <li class="text-on-primary-container font-body-md text-body-md">diamondbeautysalon63@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-white/5 py-8">
+            <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-4">
+                <span class="font-label-md text-label-md text-on-primary-container opacity-60">© 2024 DIAMOND BEAUTY SALON. All rights reserved.</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="fixed inset-y-0 right-0 z-50 w-80 max-w-[85%] h-full bg-background/95 backdrop-blur-md p-8 flex flex-col justify-between border-l border-white/20 shadow-2xl transition-transform duration-300 translate-x-full">
+        <div>
+            <div class="flex justify-between items-center mb-12">
+                <span class="font-headline-sm text-lg font-bold tracking-widest text-primary">DIAMOND</span>
+                <button class="close-menu-btn text-primary hover:text-secondary transition-colors focus:outline-none">
+                    <span class="material-symbols-outlined text-3xl">close</span>
+                </button>
+            </div>
+            <div class="flex flex-col gap-6">
+                <a href="index.html" class="text-on-surface hover:text-secondary transition-colors text-lg font-body-md">Home</a>
+                <a href="services.html" class="text-on-surface hover:text-secondary transition-colors text-lg font-body-md">Services</a>
+                <a href="gallery.html" class="text-secondary font-bold text-lg font-body-md">Gallery</a>
+                <a href="about.html" class="text-on-surface hover:text-secondary transition-colors text-lg font-body-md">About Us</a>
+                <a href="contact.html" class="text-on-surface hover:text-secondary transition-colors text-lg font-body-md">Contact</a>
+            </div>
+        </div>
+        <div class="space-y-6">
+            <a href="booking.html" class="w-full bg-[#C9A227] text-primary text-center font-bold py-4 px-6 rounded-lg block tracking-wider uppercase transition-all hover:brightness-110 gold-glow">
+                Book Appointment
+            </a>
+            <p class="text-xs text-on-surface-variant/50 text-center">© 2024 DIAMOND BEAUTY SALON</p>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js" defer></script>
+</body>
+</html>

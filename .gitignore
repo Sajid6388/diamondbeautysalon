@@ -1,0 +1,5 @@
+# Ignore agent configurations and metadata
+.gemini/
+*.log
+.DS_Store
+Thumbs.db
